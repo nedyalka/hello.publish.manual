@@ -6,12 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       - uses: actions/checkout@v2
-       - uses: testspace-com/setup-testspace@v1
-         with:
-           domain: ${{ github.repository_owner }}.stridespace.com
-           token: ${{ secrets.STRIDESPACE_TOKEN }}
-       - name: Push result to Testspace server
-         run: |
-           testspace results.xml coverage.xml "metrics.log{metrics.csv: a custom metrics}"
-         if: always()
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 50
+      - uses: testspace-com/setup-testspace@v1
+        with:
+          domain: ${{ github.repository_owner }}.stridespace.com
+          token: ${{ secrets.STRIDESPACE_TOKEN }}
+      - name: Push result to Testspace server
+        run: |
+          testspace results.xml coverage.xml "metrics.log{metrics.csv: a custom metrics}"
+        if: always()
