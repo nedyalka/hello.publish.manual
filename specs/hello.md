@@ -22,7 +22,7 @@ Do some other stuff
 - One
 - Two
 
-## !Test Case FOUR
+## Test Case FOUR
 Do some other stuff
 
 - One
