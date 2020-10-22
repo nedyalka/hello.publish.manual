@@ -15,5 +15,5 @@ jobs:
           token: ${{ secrets.STRIDESPACE_TOKEN }}
       - name: Push result to Testspace server
         run: |
-          testspace results.xml coverage.xml "metrics.log{metrics.csv: a custom metrics}" [exploratory]explore.url [non-scripted]"specs/hello.md{1:my exploratory}"
+          testspace results.xml coverage.xml "metrics.log{metrics.csv: a custom metrics}" [url.link]explore.url [non-scripted]"specs/hello.md{1:my exploratory}"
         if: always()
