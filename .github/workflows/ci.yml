@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: testspace-com/setup-testspace@v1
         with:
-          domain: 535d-212-5-158-21.ngrok.io
+          domain: a657-212-5-158-21.ngrok.io
           token: ${{ secrets.LOCAL_TOKEN }}
       - name: Push result to Testspace server
         run: |
