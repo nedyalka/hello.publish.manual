@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{ github.repository_owner }}.stridespace.com
-          token: ${{ secrets.STRIDESPACE_TOKEN }}
+          domain: a657-212-5-158-21.ngrok.io
+          token: ${{ secrets.LOCAL_TOKEN }}
       - name: Push result to Testspace server
         run: |
           testspace results.xml coverage.xml "metrics.log{metrics.csv: a custom metrics}" [url.link]explore.url [non-scripted]"specs/hello.md{1:my exploratory}"
